@@ -72,7 +72,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── HEADER ────────────────────────────────────────────────
-st.sidebar.header("Dashboard Filters")
+
 st.markdown("""
 <div class="bmd-header">
   <h1>Global Sales Analytics &nbsp;·&nbsp; Better Medical Devices (BMD)</h1>
@@ -526,4 +526,5 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
 
