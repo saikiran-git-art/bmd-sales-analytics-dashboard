@@ -303,17 +303,17 @@ with right:
     ))
 
     fig_yoy.update_layout(
-        title=dict(text="YoY Growth Rate: US vs EU", font=dict(color="white", size=13)),
+        title=dict(text="YoY Growth Rate: US vs EU", font=dict(color="black", size=13)),
         barmode="group",
         bargap=0.25,
         bargroupgap=0.05,
         plot_bgcolor="#F0F2F0",
         paper_bgcolor="#DDE3E8",
-        font=dict(color="white"),
+        font=dict(color="black"),
         legend=dict(bgcolor="#0D1B2A", bordercolor="#1E3A5F",
-                    font=dict(color="white")),
-        xaxis=dict(gridcolor="#1E3A5F", tickfont=dict(color="white"), showgrid=False),
-        yaxis=dict(gridcolor="#1E3A5F", tickfont=dict(color="white"),
+                    font=dict(color="black")),
+        xaxis=dict(gridcolor="#1E3A5F", tickfont=dict(color="black"), showgrid=False),
+        yaxis=dict(gridcolor="#1E3A5F", tickfont=dict(color="black"),
                    ticksuffix="%", showgrid=True, range=[0, 13]),
         height=320,
         margin=dict(t=50, b=40, l=40, r=20)
@@ -524,6 +524,7 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
 
 
 
