@@ -70,8 +70,15 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
+st.title("Global Sales Analytics Dashboard")
+
+st.markdown("""
+**Better Medical Devices (BMD)**  
+Interactive analytics dashboard for revenue performance, forecasting, and regional insights.
+""")
 
 # ── HEADER ────────────────────────────────────────────────
+st.sidebar.header("Dashboard Filters")
 st.markdown("""
 <div class="bmd-header">
   <h1>Global Sales Analytics &nbsp;·&nbsp; Better Medical Devices (BMD)</h1>
@@ -136,20 +143,20 @@ st.markdown('<div class="filter-bar">', unsafe_allow_html=True)
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    date_filter = st.selectbox(
+    date_filter = st.sidebar.selectbox(
         "Date Range",
         ["All","Jan","Feb","Mar","Apr","May","Jun",
          "Jul","Aug","Sep","Oct","Nov","Dec"]
     )
 with col2:
-    region_filter = st.selectbox("Region (US / EU / Global)", ["All","US","EU"])
+    region_filter = st.sidebar.selectbox("Region (US / EU / Global)", ["All","US","EU"])
 with col3:
-    category_filter = st.selectbox(
+    category_filter = st.sidebar.selectbox(
         "Product Category",
         ["All","Cardiac","Ortho","Neuro","Other"]
     )
 with col4:
-    channel_filter = st.selectbox(
+    channel_filter = st.sidebar.selectbox(
         "Channel",
         ["All","Direct Sales","Distributor","Online","Hospital Contracts"]
     )
@@ -197,7 +204,8 @@ st.markdown("<div style='margin-top:14px'></div>", unsafe_allow_html=True)
 # ROW 1 — Revenue Trend + YoY Growth
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-
+st.divider()
+st.subheader("Revenue Trends")
 left, right = st.columns([2, 1])
 
 # ── Revenue Trend: Actual bars + Forecast line + LY line ─
@@ -278,6 +286,10 @@ with left:
     st.plotly_chart(fig_trend, use_container_width=True)
 
 # ── YoY Growth  ───────────────
+
+st.divider()
+st.subheader("YOY growth")
+
 with right:
     fig_yoy = go.Figure()
 
@@ -518,4 +530,5 @@ st.markdown("""
     &nbsp;·&nbsp; ERP_US + ERP_EU → Bronze → Silver → Gold
     </span>
 </div>
+
 """, unsafe_allow_html=True)
