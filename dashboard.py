@@ -311,7 +311,7 @@ with right:
         paper_bgcolor="#DDE3E8",
         font=dict(color="black"),
         legend=dict(bgcolor="#0D1B2A", bordercolor="#1E3A5F",
-                    font=dict(color="black")),
+                    font=dict(color="white")),
         xaxis=dict(gridcolor="#1E3A5F", tickfont=dict(color="black"), showgrid=False),
         yaxis=dict(gridcolor="#1E3A5F", tickfont=dict(color="black"),
                    ticksuffix="%", showgrid=True, range=[0, 13]),
@@ -524,6 +524,7 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
 
 
 
