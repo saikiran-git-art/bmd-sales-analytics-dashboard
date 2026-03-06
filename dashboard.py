@@ -197,6 +197,7 @@ st.markdown("<div style='margin-top:14px'></div>", unsafe_allow_html=True)
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # ROW 1 — Revenue Trend + YoY Growth
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+st.markdown("### Revenue Trends")
 left, right = st.columns([2, 1])
 
 # ── Revenue Trend: Actual bars + Forecast line + LY line ─
@@ -322,6 +323,9 @@ with right:
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # ROW 2 — Category Bar | Region Donut | Scatter
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+st.divider()
+st.subheader("Revenue Drivers")
+
 c1, c2, c3 = st.columns([1.3, 1, 1.3])
 
 # ── Category horizontal bar ───────────────────────────────
@@ -520,6 +524,7 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
 
 
 
