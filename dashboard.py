@@ -197,9 +197,6 @@ st.markdown("<div style='margin-top:14px'></div>", unsafe_allow_html=True)
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # ROW 1 — Revenue Trend + YoY Growth
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-st.divider()
-st.subheader("Revenue Trends")
 left, right = st.columns([2, 1])
 
 # ── Revenue Trend: Actual bars + Forecast line + LY line ─
@@ -280,9 +277,6 @@ with left:
     st.plotly_chart(fig_trend, use_container_width=True)
 
 # ── YoY Growth  ───────────────
-
-st.divider()
-st.subheader("YOY growth")
 
 with right:
     fig_yoy = go.Figure()
@@ -526,5 +520,6 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
 
 
