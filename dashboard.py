@@ -70,12 +70,6 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-st.title("Global Sales Analytics Dashboard")
-
-st.markdown("""
-**Better Medical Devices (BMD)**  
-Interactive analytics dashboard for revenue performance, forecasting, and regional insights.
-""")
 
 # ── HEADER ────────────────────────────────────────────────
 st.sidebar.header("Dashboard Filters")
@@ -143,20 +137,20 @@ st.markdown('<div class="filter-bar">', unsafe_allow_html=True)
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    date_filter = st.sidebar.selectbox(
+    date_filter = st.selectbox(
         "Date Range",
         ["All","Jan","Feb","Mar","Apr","May","Jun",
          "Jul","Aug","Sep","Oct","Nov","Dec"]
     )
 with col2:
-    region_filter = st.sidebar.selectbox("Region (US / EU / Global)", ["All","US","EU"])
+    region_filter = st.selectbox("Region (US / EU / Global)", ["All","US","EU"])
 with col3:
-    category_filter = st.sidebar.selectbox(
+    category_filter = st.selectbox(
         "Product Category",
         ["All","Cardiac","Ortho","Neuro","Other"]
     )
 with col4:
-    channel_filter = st.sidebar.selectbox(
+    channel_filter = st.selectbox(
         "Channel",
         ["All","Direct Sales","Distributor","Online","Hospital Contracts"]
     )
@@ -532,3 +526,4 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
